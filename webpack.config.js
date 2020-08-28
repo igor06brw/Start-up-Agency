@@ -5,7 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   mode: 'development',
-  entry: "./src/index.ts",
+  entry: "./src/scripts/app.ts",
   plugins: [
     new MiniCssExtractPlugin(),
     new HtmlWebpackPlugin({ template: './src/index.html' })
@@ -19,7 +19,7 @@ module.exports = {
       {
         test: /\.tsx?$/,
         use: 'ts-loader',
-        exclude: /node_modules/,
+        exclude: [/node_modules/],
       }
     ]
   },
